@@ -27,9 +27,9 @@ export default function App() {
       const params = {
         workflow: 'dev',
         //Mega Way
-        //product: 26101,
+        product: 26101,
         //Aviator
-        product: 22956,
+        //product: 22956,
         customer: 1581
       };
       configureApp(params, async (err: any, configure: any) => {

@@ -4,7 +4,7 @@ import styles from './name.module.css'
 export default function Name() {
   return (
     <div className={styles.nameContainer}>
-      <h1 className={styles.name}>aviator</h1>
+      <h1 className={styles.name}>Mega Wayfarer</h1>
     </div>
   );
 }
