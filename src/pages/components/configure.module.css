@@ -24,3 +24,8 @@
   position: absolute;
   bottom: 0;
 }
+
+.rtr {
+  width: 100vw;
+  height: 50vh;
+}

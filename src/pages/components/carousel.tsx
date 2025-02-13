@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from './model.module.css';
 
 export default function Carousel(props: any) {
+  return;
   const { configure } = props;
   const options = {
     type: 'displayCarousel',
