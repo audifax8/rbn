@@ -35,7 +35,7 @@ export default function App() {
       configureApp(params, async (err: any, configure: any) => {
         if (!err) {
           setConfigure(configure);
-          const waitForScriptToLoad = (checkTimeMs: number, timeOutMs: number) => {
+          /*const waitForScriptToLoad = (checkTimeMs: number, timeOutMs: number) => {
             let elapsedTime = 0;
             let loaded = false;
             return new Promise((resolve, reject) => {
@@ -59,7 +59,7 @@ export default function App() {
 
           await waitForScriptToLoad(100, 20000);
           const rtrApi = new RTR_API(window.rtrViewerMV, configure);
-          rtrApi.init();
+          rtrApi.init();*/
         }
       });
     });

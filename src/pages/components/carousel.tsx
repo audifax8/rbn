@@ -4,10 +4,10 @@ import React from "react";
 //import styles from './model.module.css';
 
 export default function Carousel(props: any) {
-  return (
+  /*return (
     <></>
-  );
-  /*const { configure } = props;
+  );*/
+  const { configure } = props;
   const options = {
     type: 'displayCarousel',
     container: '.fc-carousel-wrapper',
@@ -21,5 +21,5 @@ export default function Carousel(props: any) {
   configure.run('createComponent', options, () => {});
   return (
     <></>
-  );*/
+  );
 }
