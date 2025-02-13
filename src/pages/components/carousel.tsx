@@ -1,11 +1,13 @@
 import React from "react";
-import Image from "next/image";
+//import Image from "next/image";
 
-import styles from './model.module.css';
+//import styles from './model.module.css';
 
 export default function Carousel(props: any) {
-  return;
-  const { configure } = props;
+  return (
+    <></>
+  );
+  /*const { configure } = props;
   const options = {
     type: 'displayCarousel',
     container: '.fc-carousel-wrapper',
@@ -19,5 +21,5 @@ export default function Carousel(props: any) {
   configure.run('createComponent', options, () => {});
   return (
     <></>
-  );
+  );*/
 }
