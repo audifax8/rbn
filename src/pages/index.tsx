@@ -13,6 +13,12 @@ import { useEffect, useState } from 'react';
 import styles from './components/configure.module.css';
 import { RTR_API } from "@/services/rtrApi";
 
+declare global {
+  interface Window {
+    rtrViewerMV: any;
+  }
+}
+
 export default function App() {
   const [configure, setConfigure] = useState();
   useEffect(() => {
