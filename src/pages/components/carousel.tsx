@@ -8,6 +8,7 @@ export default function Carousel(props: any) {
     <></>
   );*/
   const { configure } = props;
+  if (!configure) { return; }
   const options = {
     type: 'displayCarousel',
     container: '.fc-carousel-wrapper',
