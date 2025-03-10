@@ -1,0 +1,20 @@
+.category {
+  display: flex;
+  opacity: 0.25;
+}
+
+.selected {
+  opacity: unset;
+}
+
+.label {
+  color: var(--Dark, #1F1F24);
+  text-align: center;
+  /* Editorial/Medium - 16/Capitalized Medium */
+  font-family: Oswald;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%; /* 25.6px */
+  text-transform: uppercase;
+}

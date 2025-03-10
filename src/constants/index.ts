@@ -3,7 +3,9 @@ declare global {
     rtrViewerMV: any;
     _configure: any;
     vmmv: any;
+    _rxcData: any;
     RXC: any;
+    RXC_LOADED: boolean;
   }
 }
 

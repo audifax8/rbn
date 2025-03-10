@@ -87,6 +87,7 @@ export default function Menu() {
   return (
     <>
       {rxcReady && <div><RXCButton /></div>}
+      <div id="#rxcApp" className='rxcApp'></div>
       <section className={style.menu}>
         <ul className={style.caSeparator}>
         {casToRender.length &&

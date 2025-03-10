@@ -8,16 +8,15 @@ import Icon from '../common/icon';
 import style from './rxc.module.css';
 
 export default function RXCButton() {
-  const { vmReady } = useSelector((state: IAppState) => state.app);
+  const { rxcReady, product: { name, vendorId} } = useSelector((state: IAppState) => state.app);
   const { rxcService } = useRXC();
   async function rxcOnClick() {
-    const isBrowserSupported = await rxcService?.isBrowserSupported();
-    console.log({isBrowserSupported});
+    await rxcService?.renderRox(vendorId, name);
   }
   return (
     <button
-      className={`${style.rxcButton}  ${!vmReady ? style.disabled : ''}`}
-      disabled={!vmReady}
+      className={`${style.rxcButton}  ${!rxcReady ? style.disabled : ''}`}
+      disabled={!rxcReady}
       onClick={rxcOnClick}
     >
       <Icon src='/rxc.svg' alt='virtual mirror icon' width={18} height={18} />
