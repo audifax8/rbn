@@ -1,0 +1,9 @@
+.caSeparator {
+  width: 327px;
+  background: var(--White);
+  display: flex;
+  padding: 0.5px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}

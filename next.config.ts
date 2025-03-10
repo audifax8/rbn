@@ -4,7 +4,10 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
   images: {
-    domains: ['prod.fluidconfigure.com'],
+    domains: [
+      'prod.fluidconfigure.com',
+      'cdn-prod.fluidconfigure.com'
+    ],
   },
   crossOrigin: 'anonymous',
   eslint: {

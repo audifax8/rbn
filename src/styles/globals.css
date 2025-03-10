@@ -5,6 +5,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --Dark: #1F1F24;
+  --White: #fff;
+  --Black: #000;
+  --Gray: #fff9;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,11 +22,4 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  /*background: linear-gradient(187deg, #ADABAB 3.45%, #E1E1E1 22.56%, #F2F1F1 41.67%, #E7E7E7 60.77%, #C3C1C1 79.88%);*/
-  height: 100vh;
-  background: #f6f6f6;
-
-  #__next {
-    height: 100%;  
-  }
 }
