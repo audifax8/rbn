@@ -11,7 +11,7 @@ export default function RXCButton() {
   const { rxcReady, product: { name, vendorId} } = useSelector((state: IAppState) => state.app);
   const { rxcService } = useRXC();
   async function rxcOnClick() {
-    await rxcService?.renderRox(vendorId, name);
+    await rxcService?.renderRxc(vendorId, name);
   }
   return (
     <button
