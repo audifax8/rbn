@@ -59,9 +59,6 @@ export default function Scripts() {
       />
       <Script
         src='//rxc.luxottica.com/rxc3/fe/test/v1.0.1/dist/rxc.js'
-        //src='//rxc.luxottica.com/prod/v8.3.5/rxc.js'
-        //src='//rxc.luxottica.com/rxc3/fe/test/v1.1.1/dist/rxc.js'
-        //src='//rxc.luxottica.com/rxc3/fe/prod/v1.0.3/dist/rxc.js'
         strategy='lazyOnload'
         crossOrigin='anonymous'
         onLoad={() => {

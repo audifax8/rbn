@@ -19,7 +19,8 @@ const initialState: AppState = {
   rxcReady: false,
   vmReady: false,
   renderMenu: false,
-  params: {}
+  params: {},
+  browserData: null
 };
  
 const appSlice = createSlice({
@@ -68,6 +69,11 @@ const appSlice = createSlice({
       const { payload } = action;
       const { params } = payload;
       state.params = params;
+    },
+    setBrowserData(state, action) {
+      const { payload } = action;
+      const { browserData } = payload;
+      state.browserData = browserData;
     }
  }
 });
@@ -83,6 +89,7 @@ export const {
   setOLAInitialized,
   setProductInfo,
   setRenderMenu,
-  setParams
+  setParams,
+  setBrowserData
 } = appSlice.actions;
 export default appSlice.reducer;

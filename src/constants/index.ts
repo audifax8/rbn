@@ -41,6 +41,7 @@ export interface AppState {
   vmReady: boolean;
   renderMenu: boolean;
   params: any;
+  browserData: IBrowserData | null;
 };
 
 export interface IAttributeValue {
@@ -86,4 +87,19 @@ export interface IIcon {
   alt: string;
   width: number;
   height: number;
+};
+
+export interface IBrowserData {
+  mobile: boolean;
+  name: string;
+  version: string;
+  versionNumber: number;
+  platform: {
+    type: string;
+    vendor: string;
+  };
+  os: {
+    name: string;
+    version: string;
+  }
 };

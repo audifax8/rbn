@@ -2,7 +2,7 @@ import { useEffect, createContext, useContext, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { ConfigureService } from '../services/Configure';
-import { setConfigureReady, setProductInfo, setParams } from '../slices/app';
+import { setConfigureReady, setProductInfo, setParams, setBrowserData } from '../slices/app';
 import { IConfigureApi, MEGA_WAYFARER_ID, RBN_CUSTOMER_ID } from '@/constants';
 
 //import p_23351 from '../components-mock/23351';
@@ -51,6 +51,7 @@ export function ConfigureProvider(props: any) {
         const { id, vendorId, name } = product;
         setConfigureService(cService);
         window._configure = configure;
+        dispatch(setBrowserData({ browserData: cService.getBrowserData() }));
         dispatch(setProductInfo({ id, vendorId, name }));
         dispatch(setConfigureReady());
         dispatch(setParams({ params }));

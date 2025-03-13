@@ -19,6 +19,7 @@ export default function App() {
     configureReady, renderType, renderMenu
   } = useSelector((state: IAppState) => state.app);
 
+
   return (
     <>
       <Scripts/>

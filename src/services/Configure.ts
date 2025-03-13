@@ -3,7 +3,8 @@ import {
   IConfigureService,
   IProduct,
   IConfigureApi,
-  IAttributeValue
+  IAttributeValue,
+  IBrowserData
 } from '@/constants/index';
 
 export class ConfigureService implements IConfigureService {
@@ -92,5 +93,9 @@ export class ConfigureService implements IConfigureService {
     }
     const token = ['TKN', productVendorId.toUpperCase()].concat(tokenArray).join('~');
     return encodeURIComponent(token);
+  }
+
+  getBrowserData(): IBrowserData {
+    return this.configure.run('getBrowserData', window);
   }
 }
