@@ -11,6 +11,13 @@ export class RXCService implements IRXCService {
 
   constructor(api: any) {
     this.api = api;
+    this.initRox();
+  }
+
+  private initRox(): void {
+    if (this.rxc) {
+      return;
+    }
     this.prescription = {
       "prescriptionFlow": "MANUAL",
       "prescriptionId": 123456789,
@@ -140,20 +147,22 @@ export class RXCService implements IRXCService {
           }
       }
     };
-  }
+    if (window.RXC_LOADED && !this.rxc) {
+      console.info('ROX: Setting up');
+      window._rxcData = this.config;
+      console.info('ROX: data');
+      console.info(this.config);
+      console.info('--------');
+      this.rxc = window.RXC.rxcWidget.new(this.config);
+    }
+  };
 
   async renderRxc(): Promise<boolean> {
     try {
-      if (window.RXC_LOADED) {
-        window._rxcData = this.config;
-        console.info('ROX data:');
-        console.info(this.config);
-        console.info('--------');
-        this.rxc = window.RXC.rxcWidget.new(this.config);
-        this.rxc.render();
-        return true;
-      }
-      return false;
+      this.initRox();
+      console.info('ROX: render');
+      this.rxc.render();
+      return true;
     } catch (e) {
       console.error({e});
       return false;
