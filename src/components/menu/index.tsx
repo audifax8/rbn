@@ -64,6 +64,7 @@ export default function Menu() {
   };
 
   const [casToRender, setCasTorender] = useState<ICAMap[]>(mapCas());
+  //const { renderMenu, rxcReady } = useSelector((state: IAppState) => state.app);
   const { renderMenu, rxcReady } = useSelector((state: IAppState) => state.app);
 
   useEffect(() => {
@@ -72,7 +73,7 @@ export default function Menu() {
       setCasTorender(sanitizedCas);
     }
   },
-  [renderMenu]);
+  [true]);
 
   async function click(data: { ca: IConfigurableAttribute, av: IAttributeValue }) {
     const { ca, av } = data;
@@ -86,8 +87,6 @@ export default function Menu() {
 
   return (
     <>
-      {rxcReady && <div><RXCButton /></div>}
-      <div id="#rxcApp" className='rxcApp'></div>
       <section className={style.menu}>
         <ul className={style.caSeparator}>
         {casToRender.length &&
@@ -96,7 +95,6 @@ export default function Menu() {
               return (
                 <li key={caInfo.id}>
                   <AttributeHeader caInfo={caInfo} onClick={click} key={caInfo.id}/>
-                  {(index < (casToRender.length - 1)) && <CaSeparator />}
                 </li>
               );
           })
@@ -106,3 +104,7 @@ export default function Menu() {
     </>
   );
 };
+
+//{rxcReady && <div><RXCButton /></div>}
+//<div id="#rxcApp" className='rxcApp'></div>
+//{(index < (casToRender.length - 1)) && <CaSeparator />}
